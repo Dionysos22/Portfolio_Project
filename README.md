@@ -7,7 +7,7 @@
 
 Ankara Üniversitesi Bilgisayar Mühendisliği öğrencisi olarak geliştirdiğim, modern web teknolojilerini içeren kişisel portfolyo web sitesi projesi.
 
-**Canlı Önizleme (Live Demo):** [https://dionysos22.github.io/SarpPortfolio/](https://dionysos22.github.io/SarpPortfolio/)
+**Canlı Önizleme (Live Demo):** [https://dionysos22.github.io/Portfolio_Project/](https://dionysos22.github.io/Portfolio_Project/)
 _(Not: Linkin çalışması için repo adının doğru olduğundan emin olun)_
 
 ---
