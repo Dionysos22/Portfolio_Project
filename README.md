@@ -51,6 +51,8 @@ Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de ki�
 │
 └── js/
     └── script.js     # Menü ve Form kontrolleri
+```
+
 ---
 
 ## 📬 İletişim (Contact)
@@ -67,4 +69,3 @@ Projelerim hakkında konuşmak veya iş birliği yapmak için bana ulaşabilirsi
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
-```
