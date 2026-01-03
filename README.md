@@ -50,8 +50,7 @@ Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de ki�
 ├── css/
 │   └── styles.css    # Tüm stil kodları (Tek dosya mimarisi)
 │
-├── js/
+└── js/
     └── script.js     # Menü ve Form kontrolleri
-
 
 ```
