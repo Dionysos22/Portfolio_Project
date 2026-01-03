@@ -8,7 +8,6 @@
 Ankara Üniversitesi Bilgisayar Mühendisliği öğrencisi olarak geliştirdiğim, modern web teknolojilerini içeren kişisel portfolyo web sitesi projesi.
 
 **Canlı Önizleme (Live Demo):** [https://dionysos22.github.io/Portfolio_Project/](https://dionysos22.github.io/Portfolio_Project/)
-_(Not: Linkin çalışması için repo adının doğru olduğundan emin olun)_
 
 ---
 
@@ -39,7 +38,7 @@ Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de ki�
 ## 📂 Dosya Yapısı (File Structure)
 
 ```text
-/SarpPortfolio
+/Portfolio_Project
 │
 ├── index.html        # Ana Giriş Sayfası
 ├── cv.html           # Özgeçmiş ve Yetenekler
@@ -52,9 +51,6 @@ Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de ki�
 │
 └── js/
     └── script.js     # Menü ve Form kontrolleri
-
-```
-
 ---
 
 ## 📬 İletişim (Contact)
@@ -71,3 +67,4 @@ Projelerim hakkında konuşmak veya iş birliği yapmak için bana ulaşabilirsi
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
+```
