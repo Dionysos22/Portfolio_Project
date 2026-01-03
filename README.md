@@ -57,12 +57,6 @@ Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de ki�
 
 ---
 
-## 📸 Ekran Görüntüleri (Screenshots)
-
-_(Projenin ekran görüntülerini assets klasörüne ekleyip buraya ![Görsel](assets/screenshot.png) şeklinde koyabilirsin. Yoksa bu başlığı silebilirsin.)_
-
----
-
 ## 📬 İletişim (Contact)
 
 Projelerim hakkında konuşmak veya iş birliği yapmak için bana ulaşabilirsiniz:
