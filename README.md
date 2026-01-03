@@ -51,9 +51,7 @@ Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de ki�
 │   └── styles.css    # Tüm stil kodları (Tek dosya mimarisi)
 │
 ├── js/
-│   └── script.js     # Menü ve Form kontrolleri
-│
-└── assets/           # Görseller ve ikonlar
-    ├── profil.jpg
-    └── ...
+    └── script.js     # Menü ve Form kontrolleri
+
+
 ```
