@@ -5,65 +5,78 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-Ankara Üniversitesi Bilgisayar Mühendisliği öğrencisi olarak geliştirdiğim, modern web teknolojilerini içeren kişisel portfolyo web sitesi projesi.
+A modern personal portfolio website developed as a **Computer Engineering** student at **Ankara University**. This project showcases my skills and projects using pure web technologies with a gamified interface.
 
-**Canlı Önizleme (Live Demo):** [https://dionysos22.github.io/Portfolio_Project/](https://dionysos22.github.io/Portfolio_Project/)
+**Live Demo:** [https://dionysos22.github.io/Portfolio_Project/](https://dionysos22.github.io/Portfolio_Project/)
 
----
+## 🚀 About The Project
 
-## 🚀 Proje Hakkında (About The Project)
+This project was built to fulfill the requirements of the **Web Programming** course and to demonstrate my frontend development abilities. Unlike standard static portfolios, it features dynamic themes and interactive elements.
 
-Bu proje, hem **Web Programlama** dersi gereksinimlerini karşılamak hem de kişisel projelerimi ve yeteneklerimi sergilemek amacıyla geliştirilmiştir. Standart bir portfolyo sitesinden farklı olarak, dinamik renk geçişleri ve oyunlaştırılmış (gamified) bir arayüz hedeflenmiştir.
+### ✨ Key Features
 
-### ✨ Öne Çıkan Özellikler (Key Features)
+- **Contextual Theming:** Dynamic background lighting and accent colors change based on the active page (Purple -> Blue -> Turquoise).
+- **Hacker Style Typography:** JavaScript-powered typewriter effect on the landing page.
+- **Glassmorphism Navigation:** Fixed navigation bar with blur effects and transparency.
+- **CSS Animations:** Skill bars on the CV page fill up automatically using `@keyframes` animations.
+- **Fully Responsive:** Optimized for mobile, tablet, and desktop with a custom hamburger menu.
+- **Form Simulation:** A contact form that validates input and logs data to the console using JavaScript.
 
-- **Contextual Theming (Bağlamsal Tema):** Sayfalar arası geçişte (Ana Sayfa -> CV -> Projeler) arka plan ışığı ve vurgu renkleri dinamik olarak değişir (Mor -> Mavi -> Turkuaz).
-- **Hacker Style Typography:** Ana sayfada JavaScript ile çalışan daktilo (typewriter) efekti.
-- **Glassmorphism Navigation:** Bulanık arka plana sahip, şeffaf ve sabit (fixed) navigasyon barı.
-- **CSS Animations:** CV sayfasında CSS `@keyframes` ile oluşturulmuş, sayfa yüklendiğinde dolan yetenek barları.
-- **Tam Responsive Tasarım:** Mobil, tablet ve masaüstü cihazlarla %100 uyumlu, özel hamburger menü tasarımı.
-- **Form Simülasyonu:** JavaScript ile doğrulanan ve konsola loglanan iletişim formu.
+## 🛠️ Built With
 
----
-
-## 🛠️ Kullanılan Teknolojiler (Built With)
-
-- **HTML5:** Semantik etiket yapısı (`header`, `nav`, `section`, `footer`).
+- **HTML5:** Semantic markup structure (`header`, `nav`, `section`, `footer`).
 - **CSS3:** Flexbox, Grid Layout, CSS Variables (`:root`), Animations, Media Queries.
-- **JavaScript (ES6):** DOM Manipülasyonu, Event Listener'lar.
-- **Google Fonts:** 'Poppins' ve 'Consolas' (Kod görünümü için).
+- **JavaScript (ES6):** DOM Manipulation, Event Listeners.
+- **Google Fonts:** 'Poppins' (Body) and 'Consolas' (Code blocks).
 
----
+## 🛠️ Installation & Setup
 
-## 📂 Dosya Yapısı (File Structure)
+Since this is a static web project, no complex dependency installation is required.
+
+**Clone the repository:**
+
+```bash
+git clone [https://github.com/Dionysos22/Portfolio_Project.git](https://github.com/Dionysos22/Portfolio_Project.git)
+cd Portfolio_Project
+```
+
+**Run the project:**
+
+Option 1: **Direct Open**
+Simply locate `index.html` in the folder and double-click to open it in your web browser.
+
+Option 2: **VS Code Live Server (Recommended)**
+
+1. Open the folder in **VS Code**.
+2. Install the **Live Server** extension.
+3. Right-click `index.html` and select **"Open with Live Server"**.
+
+## 📂 File Structure
 
 ```text
 /Portfolio_Project
 │
-├── index.html        # Ana Giriş Sayfası
-├── cv.html           # Özgeçmiş ve Yetenekler
-├── projects.html     # Proje Listesi
-├── about.html        # Hakkında ve Galeri
-├── contact.html      # İletişim Formu
+├── index.html        # Main Landing Page
+├── cv.html           # Resume & Skills
+├── projects.html     # Projects Showcase
+├── about.html        # About Me & Gallery
+├── contact.html      # Contact Form
 │
 ├── css/
-│   └── styles.css    # Tüm stil kodları (Tek dosya mimarisi)
+│   └── styles.css    # Main Stylesheet (Single file architecture)
 │
 └── js/
-    └── script.js     # Menü ve Form kontrolleri
+    └── script.js     # Menu logic & Form validation
 ```
 
----
+## 📬 Contact
 
-## 📬 İletişim (Contact)
-
-Projelerim hakkında konuşmak veya iş birliği yapmak için bana ulaşabilirsiniz:
+Feel free to reach out for collaboration or just to say hi!
 
 **Sarp Mataş (Dionysos)**
 
 - 🔗 **LinkedIn:** [linkedin.com/in/sarpmatas](https://www.linkedin.com/in/sarpmatas/)
 - 💻 **GitHub:** [github.com/Dionysos22](https://github.com/Dionysos22)
-- 🎓 **Topluluk:** [Ankara Üni. Bilgisayar Topluluğu](https://www.linkedin.com/company/aucomputersociety)
 
 ---
 
