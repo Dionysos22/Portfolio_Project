@@ -62,6 +62,7 @@ A hidden Easter egg for geeks! Click the `>_` button to open a fully functional 
 │   └── script.js     # Logic (ScrollSpy, Terminal, Spotlight)
 │
 └── README.md         # Documentation
+```
 
 ## 📬 Contact
 
@@ -76,4 +77,7 @@ Feel free to reach out for collaboration or just to say hi!
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
+
+```
+
 ```
