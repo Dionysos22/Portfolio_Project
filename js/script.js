@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 2. RENK DEĞİŞTİREN (CHAMELEON) GÖZLEMCİ
+  // 2. RENK DEĞİŞTİRME
   const sectionsWithColor = document.querySelectorAll(
     ".page-section[data-color]"
   );
@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     { threshold: 0.3 }
-  ); // %30 görünce renk değişsin
+  );
 
   sectionsWithColor.forEach((s) => themeObserver.observe(s));
 
-  // 3. SCROLL SPY (MENÜ AKTİFLİĞİ)
+  // 3. SCROLL SPY
   const sections = document.querySelectorAll(".page-section");
   const navLinks = document.querySelectorAll(".menu li a");
   window.addEventListener("scroll", () => {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 4. SPOTLIGHT EFEKTİ (MOUSE TAKİBİ)
+  // 4. SPOTLIGHT EFEKTİ
   const cardsWrapper = document.getElementById("cards");
   const cards = document.querySelectorAll(".card");
   if (cardsWrapper) {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })();
   }
 
-  // 6. TERMİNAL (CLI)
+  // 6. TERMİNAL
   const termToggle = document.querySelector(".terminal-toggle");
   const termOverlay = document.getElementById("terminalOverlay");
   const termClose = document.getElementById("closeTerminal");

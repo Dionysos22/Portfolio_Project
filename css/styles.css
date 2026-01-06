@@ -1,43 +1,39 @@
-/* =========================================
-   1. GENEL AYARLAR
-   ========================================= */
+/* 
+    GENEL AYARLAR
+    */
 :root {
   --bg-color: #0f172a;
   --text-color: #e2e8f0;
-  --accent-color: #d946ef; /* Varsayılan: Mor */
+  --accent-color: #d946ef;
   --glow-color: rgba(217, 70, 239, 0.25);
   --nav-bg: rgba(15, 23, 42, 0.9);
 }
 
-/* =========================================
-   0. SCROLLBAR (KAYDIRMA ÇUBUĞU)
-   ========================================= */
+/* 
+   SCROLLBAR 
+    */
 
-/* Firefox için Standart Ayar */
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) var(--bg-color);
 }
 
-/* Chrome, Edge, Safari ve Opera için */
 ::-webkit-scrollbar {
-  width: 10px; /* Çubuğun genişliği */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-color); /* Arka plan (Site zeminiyle aynı) */
+  background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(
-    --accent-color
-  ); /* SİHİR BURADA: O anki bölümün rengi! */
-  border-radius: 20px; /* Yuvarlak hatlar */
-  border: 3px solid var(--bg-color); /* Kenarlardan boşluk vererek "yüzen çubuk" hissi yaratır */
+  background-color: var(--accent-color);
+  border-radius: 20px;
+  border: 3px solid var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #fff; /* Tutup çekerken parlasın */
+  background-color: #fff;
 }
 /* Yumuşak Kaydırma ve Renk Geçişleri */
 html {
@@ -89,9 +85,9 @@ ul {
   list-style: none;
 }
 
-/* =========================================
+/* 
    2. NAVİGASYON
-   ========================================= */
+  */
 header {
   position: fixed;
   top: 0;
@@ -136,9 +132,9 @@ nav {
   color: var(--accent-color);
   background: rgba(255, 255, 255, 0.05);
 }
-/* =========================================
+/* 
     RESPONSIVE (MOBİL) MENÜ
-   ========================================= */
+    */
 .hamburger {
   display: none;
   cursor: pointer;
@@ -195,9 +191,9 @@ nav {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-/* =========================================
-   3. SAYFA BÖLÜMLERİ
-   ========================================= */
+/* 
+   SAYFA BÖLÜMLERİ
+  */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -325,7 +321,7 @@ main {
   color: var(--accent-color);
 }
 
-/* Projects (Spotlight) */
+/* Projects */
 .cards-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -426,31 +422,30 @@ button:hover {
   background: #fff;
 }
 
-/* =========================================
-   9. SOSYAL MEDYA KONUMLANDIRMA (GÜNCEL)
-   ========================================= */
+/* 
+    SOSYAL MEDYA KONUMLANDIRMA 
+    */
 
-/* Tüm bloğu (Yazı + İkonlar) butonun aşağısına it */
 .social-connect {
-  margin-top: 40px; /* BURAYI ARTIRDIK: Butondan uzaklaştı */
-  text-align: left; /* Yazıyı sola yasla */
+  margin-top: 40px;
+  text-align: left;
 }
 
 .social-connect h3 {
   font-size: 1.1rem;
   color: #94a3b8;
-  margin-bottom: 15px; /* "Or Connect Via" yazısı ile ikonlar arası */
+  margin-bottom: 15px;
 }
 
 .social-links-row {
   display: flex;
-  gap: 20px; /* İkonlar arası boşluk */
-  justify-content: flex-start; /* Sola yaslı */
+  gap: 20px;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .social-icon {
-  font-size: 2rem; /* İdeal boyut */
+  font-size: 2rem;
   color: #94a3b8;
   transition: all 0.3s ease;
   display: flex;
@@ -472,9 +467,9 @@ footer {
   font-size: 0.9rem;
 }
 
-/* =========================================
-   7. TERMINAL & RESPONSIVE (GÜNCELLENMİŞ)
-   ========================================= */
+/* 
+   7. TERMINAL & RESPONSIVE 
+    */
 .terminal-toggle {
   position: fixed;
   bottom: 30px;
@@ -530,12 +525,12 @@ footer {
 .terminal-window {
   width: 650px;
   height: 450px;
-  background: #0c0c0c; /* Simsiyah arka plan */
+  background: #0c0c0c;
   border: 1px solid #333;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  font-family: "JetBrains Mono", monospace; /* Yeni Font */
+  font-family: "JetBrains Mono", monospace;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
 }
 
@@ -562,13 +557,12 @@ footer {
   padding: 20px;
   overflow-y: auto;
   text-align: left;
-  color: #4af626; /* Matrix Yeşili */
+  color: #4af626;
   font-size: 0.95rem;
   line-height: 1.5;
-  text-shadow: 0 0 5px rgba(74, 246, 38, 0.4); /* Hafif Parlama */
+  text-shadow: 0 0 5px rgba(74, 246, 38, 0.4);
 }
 
-/* Scrollbar'ı Terminale Özel Yapalım */
 .terminal-body::-webkit-scrollbar {
   width: 8px;
 }
@@ -591,7 +585,6 @@ footer {
   font-weight: bold;
 }
 
-/* Input alanı görünmez olsun ama yazılabilsin */
 #terminalInput {
   background: transparent;
   border: none;
@@ -600,7 +593,7 @@ footer {
   outline: none;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.95rem;
-  caret-color: #4af626; /* İmleç rengi */
+  caret-color: #4af626;
 }
 
 /* Mobil Uyumluluk */
@@ -613,44 +606,42 @@ footer {
     font-size: 0.85rem;
   }
 }
-/* =========================================
-   8. PROFİL FOTOĞRAFI TASARIMI (Sade & Renkli)
-   ========================================= */
+/* 
+   8. PROFİL FOTOĞRAFI TASARIMI 
+    */
 .about-container {
   display: flex;
-  align-items: center; /* Dikeyde ortala */
-  gap: 40px; /* Resim ile yazı arası boşluk */
+  align-items: center;
+  gap: 40px;
   max-width: 900px;
 }
 
 .profile-frame {
-  flex-shrink: 0; /* Resmin sıkışmasını engelle */
+  flex-shrink: 0;
   position: relative;
 }
 
 .profile-img {
   width: 200px;
   height: 200px;
-  object-fit: cover; /* Resmi bozmadan kırp */
-  border-radius: 50%; /* Tam yuvarlak */
+  object-fit: cover;
+  border-radius: 50%;
 
-  /* SADECE ÇERÇEVE VE IŞIK (Siyah beyaz filtresi kaldırıldı) */
-  border: 4px solid var(--accent-color); /* Tema renginde çerçeve */
-  box-shadow: 0 0 20px var(--glow-color); /* Tema renginde ışık */
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 0 20px var(--glow-color);
 
   transition: all 0.5s ease;
 }
 
-/* Mouse gelince sadece biraz büyüsün ve parlasın */
 .profile-frame:hover .profile-img {
-  transform: scale(1.05); /* Hafif büyüsün */
-  box-shadow: 0 0 40px var(--accent-color); /* Işık artsın */
+  transform: scale(1.05);
+  box-shadow: 0 0 40px var(--accent-color);
 }
 
 /* MOBİL UYUMLULUK */
 @media (max-width: 768px) {
   .about-container {
-    flex-direction: column; /* Telefondan alt alta */
+    flex-direction: column;
     text-align: center;
   }
   .profile-img {
@@ -660,5 +651,22 @@ footer {
   }
   .interests-grid {
     justify-content: center;
+  }
+}
+.nav-icon {
+  height: 40px;
+  width: auto;
+
+  filter: brightness(0) invert(1);
+}
+
+.logo .nav-icon {
+  filter: brightness(0) invert(1) drop-shadow(0 0 3px var(--accent-color))
+    drop-shadow(0 0 3px var(--accent-color));
+}
+
+@media (max-width: 768px) {
+  .nav-icon {
+    height: 24px;
   }
 }
