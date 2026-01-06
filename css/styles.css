@@ -136,7 +136,65 @@ nav {
   color: var(--accent-color);
   background: rgba(255, 255, 255, 0.05);
 }
+/* =========================================
+    RESPONSIVE (MOBİL) MENÜ
+   ========================================= */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+  box-shadow: 0 0 5px var(--accent-color);
+}
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 0 0 15px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .menu li {
+    margin: 15px 0;
+  }
+
+  /* Hamburger X Animasyonu */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
 /* =========================================
    3. SAYFA BÖLÜMLERİ
    ========================================= */
