@@ -77,7 +77,3 @@ Feel free to reach out for collaboration or just to say hi!
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
-
-```
-
-```
