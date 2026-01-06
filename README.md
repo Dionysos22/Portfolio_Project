@@ -1,73 +1,67 @@
-# 👨‍💻 Sarp Mataş (Dionysos) - Personal Portfolio
+# 👨‍💻 Sarp Mataş (Dionysos) - Personal Portfolio v2
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![VS Code](https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-A modern personal portfolio website developed as a **Computer Engineering** student at **Ankara University**. This project showcases my skills and projects using pure web technologies with a gamified interface.
+A modern, **Single Page Application (SPA)** portfolio website designed with a focus on interactive UX and visual depth. This project showcases advanced CSS techniques and JavaScript-based dynamic theming.
 
 **Live Demo:** [https://dionysos22.github.io/Portfolio_Project/](https://dionysos22.github.io/Portfolio_Project/)
 
-## 🚀 About The Project
+---
 
-This project was built to fulfill the requirements of the **Web Programming** course and to demonstrate my frontend development abilities. Unlike standard static portfolios, it features dynamic themes and interactive elements.
+## ✨ Key Features (v2)
 
-### ✨ Key Features
+### 🎨 Chameleon Theme Engine
 
-- **Contextual Theming:** Dynamic background lighting and accent colors change based on the active page (Purple -> Blue -> Turquoise).
-- **Hacker Style Typography:** JavaScript-powered typewriter effect on the landing page.
-- **Glassmorphism Navigation:** Fixed navigation bar with blur effects and transparency.
-- **CSS Animations:** Skill bars on the CV page fill up automatically using `@keyframes` animations.
-- **Fully Responsive:** Optimized for mobile, tablet, and desktop with a custom hamburger menu.
-- **Form Simulation:** A contact form that validates input and logs data to the console using JavaScript.
+The website dynamically changes its **accent color** and **glow effects** based on the currently viewed section.
 
-## 🛠️ Built With
+- **Home:** Purple (Cyberpunk)
+- **About:** Blue (Professional)
+- **CV:** Green (Growth)
+- **Projects:** Orange (Creativity)
+- **Contact:** Red/Pink (Attention)
 
-- **HTML5:** Semantic markup structure (`header`, `nav`, `section`, `footer`).
-- **CSS3:** Flexbox, Grid Layout, CSS Variables (`:root`), Animations, Media Queries.
-- **JavaScript (ES6):** DOM Manipulation, Event Listeners.
-- **Google Fonts:** 'Poppins' (Body) and 'Consolas' (Code blocks).
+### 🔦 Spotlight Effect
 
-## 🛠️ Installation & Setup
+Project cards feature a **mouse-tracking radial gradient** that creates a "flashlight" effect, revealing borders and depth as the user hovers over them.
 
-Since this is a static web project, no complex dependency installation is required.
+### 🖥️ Interactive Terminal (CLI)
 
-**Clone the repository:**
+A hidden Easter egg for geeks! Click the `>_` button to open a fully functional CLI simulation.
 
-```bash
-git clone [https://github.com/Dionysos22/Portfolio_Project.git](https://github.com/Dionysos22/Portfolio_Project.git)
-cd Portfolio_Project
-```
+- **Font:** JetBrains Mono (with neon glow)
+- **Commands:** `help`, `whoami`, `github`, `contact`, `clear`
 
-**Run the project:**
+### 📱 Fully Responsive & SPA
 
-Option 1: **Direct Open**
-Simply locate `index.html` in the folder and double-click to open it in your web browser.
+- Migrated from multi-file structure to a single `index.html`.
+- Smooth scrolling navigation with active state detection (Scroll Spy).
+- Custom glassmorphism header and hamburger menu for mobile devices.
 
-Option 2: **VS Code Live Server (Recommended)**
+---
 
-1. Open the folder in **VS Code**.
-2. Install the **Live Server** extension.
-3. Right-click `index.html` and select **"Open with Live Server"**.
+## 🛠️ Tech Stack
 
-## 📂 File Structure
+- **Core:** HTML5, CSS3, JavaScript (ES6+)
+- **Styling:** CSS Variables, Flexbox, Grid, Keyframe Animations
+- **Icons:** Font Awesome 6
+- **Fonts:** Poppins (UI), JetBrains Mono (Terminal), Consolas (Code)
+
+---
+
+## 📂 Project Structure
 
 ```text
 /Portfolio_Project
 │
-├── index.html        # Main Landing Page
-├── cv.html           # Resume & Skills
-├── projects.html     # Projects Showcase
-├── about.html        # About Me & Gallery
-├── contact.html      # Contact Form
-│
+├── index.html        # Main Entry (Single Page)
 ├── css/
-│   └── styles.css    # Main Stylesheet (Single file architecture)
+│   └── styles.css    # Global Styles & Theming
+├── js/
+│   └── script.js     # Logic (ScrollSpy, Terminal, Spotlight)
 │
-└── js/
-    └── script.js     # Menu logic & Form validation
-```
+└── README.md         # Documentation
 
 ## 📬 Contact
 
@@ -82,3 +76,4 @@ Feel free to reach out for collaboration or just to say hi!
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
+```
