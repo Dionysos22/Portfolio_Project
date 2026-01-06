@@ -1,35 +1,60 @@
 /* =========================================
-   1. GENEL AYARLAR VE DEĞİŞKENLER
+   1. GENEL AYARLAR
    ========================================= */
 :root {
-  --bg-color: #0f172a; /* Arka Plan */
-  --card-bg: #1e293b; /* Kart Rengi */
-  --text-color: #e2e8f0; /* Yazı Rengi */
-  --accent-color: #38bdf8; /* Varsayılan Vurgu (Mavi) */
-  --glow-color: rgba(56, 189, 248, 0.25); /* Varsayılan Işık */
-  --nav-bg: rgba(15, 23, 42, 0.85);
+  --bg-color: #0f172a;
+  --text-color: #e2e8f0;
+  --accent-color: #d946ef; /* Varsayılan: Mor */
+  --glow-color: rgba(217, 70, 239, 0.25);
+  --nav-bg: rgba(15, 23, 42, 0.9);
 }
 
-/* --- SAYFAYA ÖZEL RENKLER (Contextual Theming) --- */
-body.page-home {
-  --accent-color: #d946ef;
-  --glow-color: rgba(217, 70, 239, 0.25);
+/* =========================================
+   0. SCROLLBAR (KAYDIRMA ÇUBUĞU)
+   ========================================= */
+
+/* Firefox için Standart Ayar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--bg-color);
 }
-body.page-cv {
-  --accent-color: #8b5cf6;
-  --glow-color: rgba(139, 92, 246, 0.25);
+
+/* Chrome, Edge, Safari ve Opera için */
+::-webkit-scrollbar {
+  width: 10px; /* Çubuğun genişliği */
 }
-body.page-projects {
-  --accent-color: #3b82f6;
-  --glow-color: rgba(59, 130, 246, 0.25);
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color); /* Arka plan (Site zeminiyle aynı) */
 }
-body.page-about {
-  --accent-color: #0ea5e9;
-  --glow-color: rgba(14, 165, 233, 0.25);
+
+::-webkit-scrollbar-thumb {
+  background-color: var(
+    --accent-color
+  ); /* SİHİR BURADA: O anki bölümün rengi! */
+  border-radius: 20px; /* Yuvarlak hatlar */
+  border: 3px solid var(--bg-color); /* Kenarlardan boşluk vererek "yüzen çubuk" hissi yaratır */
 }
-body.page-contact {
-  --accent-color: #14b8a6;
-  --glow-color: rgba(20, 184, 166, 0.25);
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fff; /* Tutup çekerken parlasın */
+}
+/* Yumuşak Kaydırma ve Renk Geçişleri */
+html {
+  scroll-behavior: smooth;
+}
+body,
+.logo,
+.menu li a,
+.section-title,
+.hero-subtitle,
+button,
+.card h3,
+.interest-box,
+.skill-tag,
+.timeline-item::before,
+.timeline-item .year {
+  transition: all 0.5s ease;
 }
 
 * {
@@ -41,19 +66,23 @@ body.page-contact {
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
-  background-image: radial-gradient(
-    circle at 90% 10%,
-    var(--glow-color) 0%,
-    transparent 60%
-  );
-  background-attachment: fixed;
   color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
+
+  /* Hareketli Izgara Arka Plan */
+  background-image: linear-gradient(
+      rgba(15, 23, 42, 0.95),
+      rgba(15, 23, 42, 0.95)
+    ),
+    linear-gradient(var(--accent-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-color) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
 }
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  color: inherit;
   transition: 0.3s;
 }
 ul {
@@ -61,258 +90,500 @@ ul {
 }
 
 /* =========================================
-   2. NAVİGASYON (Hacker Style)
+   2. NAVİGASYON
    ========================================= */
 header {
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  width: 90%;
-  margin: 0 auto;
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 nav {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .logo {
   font-family: "Consolas", monospace;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: var(--accent-color);
+  color: #fff;
   letter-spacing: -1px;
-}
-.logo::after {
-  content: "_";
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
 }
 
 .menu {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
-
 .menu li a {
-  font-family: "Consolas", monospace;
-  font-size: 0.95rem;
-  color: #cbd5e1;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #94a3b8;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
-
-/* Menü Hover Efektleri */
-.menu li a:hover,
-.menu li a.active {
+.menu li a.active,
+.menu li a:hover {
   color: var(--accent-color);
   background: rgba(255, 255, 255, 0.05);
-  text-shadow: 0 0 10px var(--accent-color);
-}
-.menu li a:hover::before,
-.menu li a.active::before {
-  content: "{ ";
-  color: var(--accent-color);
-}
-.menu li a:hover::after,
-.menu li a.active::after {
-  content: " }";
-  color: var(--accent-color);
 }
 
 /* =========================================
-   3. RESPONSIVE (MOBİL) MENÜ
-   ========================================= */
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.3s ease-in-out;
-  background-color: var(--accent-color);
-  border-radius: 3px;
-  box-shadow: 0 0 5px var(--accent-color);
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-  .menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: rgba(15, 23, 42, 0.95);
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    border-radius: 0 0 15px 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-top: none;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-  }
-  .menu.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  .menu li {
-    margin: 15px 0;
-  }
-
-  /* Hamburger X Animasyonu */
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-
-/* =========================================
-   4. İÇERİK ve BİLEŞENLER
+   3. SAYFA BÖLÜMLERİ
    ========================================= */
 main {
   max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: center;
-  min-height: 60vh;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-h1 {
+.page-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.section-title {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   color: var(--accent-color);
 }
-h2,
-h3 {
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-p {
-  margin-bottom: 15px;
-  color: #94a3b8;
-}
 
-/* Butonlar ve Kartlar */
-.project-card,
-.cv-section,
-form {
-  background-color: var(--card-bg);
-  padding: 25px;
-  margin-bottom: 30px;
-  border-radius: 15px;
-  text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease;
+/* Hero */
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #fff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-color);
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  letter-spacing: 2px;
 }
-
-button,
-.btn,
-.project-card a {
-  display: inline-block;
-  background-color: var(--accent-color);
-  color: #0f172a;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
+.hero-dionysos {
+  font-family: "Consolas", monospace;
+  color: #64748b;
   margin-top: 10px;
-  cursor: pointer;
-  border: none;
-}
-button:hover,
-.btn:hover,
-.project-card a:hover {
-  background-color: white;
-  color: var(--accent-color);
-  box-shadow: 0 0 15px var(--accent-color);
 }
 
-/* Form Elemanları */
+/* About */
+.content-container {
+  max-width: 800px;
+}
+.lead-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.interest-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-color);
+}
+.interest-box h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+/* CV Section */
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.cv-column h3.cv-heading {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-color);
+}
+.timeline-item .year {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+.timeline-item h4 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-tag {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.skill-tag:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Projects (Spotlight) */
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  position: relative;
+  height: 300px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.1),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+.cards-wrapper:hover .card::before {
+  opacity: 1;
+}
+.card-content {
+  background: #0f172a;
+  position: absolute;
+  inset: 1px;
+  border-radius: 11px;
+  z-index: 2;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+.card p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+.card a {
+  margin-top: auto;
+  color: #fff;
+  font-size: 0.85rem;
+  width: max-content;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+/* Contact */
+.contact-container {
+  max-width: 600px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
 input,
 textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  background-color: #0f172a;
+  padding: 15px;
+  background: #1e293b;
   border: 1px solid #334155;
-  border-radius: 5px;
-  color: white;
-  font-family: "Poppins", sans-serif;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
 }
 input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent-color);
 }
+button {
+  background: var(--accent-color);
+  color: #0f172a;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+  background: #fff;
+}
+
+.social-connect {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.social-links-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.social-btn {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.social-btn:hover {
+  background: var(--accent-color);
+  color: #0f172a;
+}
 
 /* Footer */
 footer {
-  background-color: #0b1120;
   text-align: center;
-  padding: 40px 0;
-  margin-top: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #64748b;
+  font-size: 0.9rem;
 }
-.social-links {
+
+/* =========================================
+   7. TERMINAL & RESPONSIVE (GÜNCELLENMİŞ)
+   ========================================= */
+.terminal-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #0f172a;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  color: var(--accent-color);
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  font-family: "JetBrains Mono", monospace;
+  cursor: pointer;
+  z-index: 2000;
+  box-shadow: 0 0 15px var(--glow-color);
+  transition: 0.3s;
 }
-.social-links a {
-  background-color: var(--card-bg);
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-.social-links a:hover {
-  background-color: var(--accent-color);
+.terminal-toggle:hover {
+  transform: scale(1.1);
+  background: var(--accent-color);
   color: #0f172a;
 }
-/* DAKTİLO EFEKTİ */
-.typewriter {
-  color: var(--accent-color);
-  font-family: "Consolas", monospace;
-  font-weight: bold;
-  border-right: 2px solid var(--accent-color);
-  animation: cursor-blink 0.75s step-end infinite;
+
+.terminal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
 }
-@keyframes cursor-blink {
-  50% {
-    border-color: transparent;
+.terminal-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.terminal-window {
+  width: 650px;
+  height: 450px;
+  background: #0c0c0c; /* Simsiyah arka plan */
+  border: 1px solid #333;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  font-family: "JetBrains Mono", monospace; /* Yeni Font */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+}
+
+.terminal-header {
+  background: #1f1f1f;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+.terminal-title {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+.terminal-close {
+  cursor: pointer;
+  color: #ff5f56;
+  font-weight: bold;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  text-align: left;
+  color: #4af626; /* Matrix Yeşili */
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-shadow: 0 0 5px rgba(74, 246, 38, 0.4); /* Hafif Parlama */
+}
+
+/* Scrollbar'ı Terminale Özel Yapalım */
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+.terminal-body::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+
+.input-line {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+.prompt {
+  color: #4af626;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Input alanı görünmez olsun ama yazılabilsin */
+#terminalInput {
+  background: transparent;
+  border: none;
+  color: #fff;
+  flex: 1;
+  outline: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.95rem;
+  caret-color: #4af626; /* İmleç rengi */
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .terminal-window {
+    width: 95%;
+    height: 60%;
+  }
+  .terminal-body {
+    font-size: 0.85rem;
+  }
+}
+/* =========================================
+   8. PROFİL FOTOĞRAFI TASARIMI (Sade & Renkli)
+   ========================================= */
+.about-container {
+  display: flex;
+  align-items: center; /* Dikeyde ortala */
+  gap: 40px; /* Resim ile yazı arası boşluk */
+  max-width: 900px;
+}
+
+.profile-frame {
+  flex-shrink: 0; /* Resmin sıkışmasını engelle */
+  position: relative;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Resmi bozmadan kırp */
+  border-radius: 50%; /* Tam yuvarlak */
+
+  /* SADECE ÇERÇEVE VE IŞIK (Siyah beyaz filtresi kaldırıldı) */
+  border: 4px solid var(--accent-color); /* Tema renginde çerçeve */
+  box-shadow: 0 0 20px var(--glow-color); /* Tema renginde ışık */
+
+  transition: all 0.5s ease;
+}
+
+/* Mouse gelince sadece biraz büyüsün ve parlasın */
+.profile-frame:hover .profile-img {
+  transform: scale(1.05); /* Hafif büyüsün */
+  box-shadow: 0 0 40px var(--accent-color); /* Işık artsın */
+}
+
+/* MOBİL UYUMLULUK */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Telefondan alt alta */
+    text-align: center;
+  }
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  .interests-grid {
+    justify-content: center;
   }
 }

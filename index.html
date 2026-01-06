@@ -1,67 +1,275 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarp Mataş | Portfolyo</title>
+    <title>Sarp Mataş | Computer Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Consolas&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="page-home">
+  <body>
     <header>
       <nav>
-        <div class="logo">Dionysos</div>
-
+        <div class="logo">Sarp Mataş</div>
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </div>
-
         <ul class="menu">
-          <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="projects.html">Projeler</a></li>
-          <li><a href="about.html">Hakkında</a></li>
-          <li><a href="contact.html">İletişim</a></li>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Merhaba, Ben Sarp!</h1>
-      <p>Ben bir <span class="typewriter"></span></p>
+      <section
+        id="home"
+        class="page-section hero-section"
+        data-color="#d946ef"
+        data-glow="rgba(217, 70, 239, 0.25)"
+      >
+        <h1 class="hero-title">SARP<br />MATAŞ</h1>
+        <p class="hero-subtitle">Computer Engineering Student</p>
+        <p class="hero-dionysos">(aka <span class="typewriter"></span>)</p>
+      </section>
+
+      <section
+        id="about"
+        class="page-section"
+        data-color="#38bdf8"
+        data-glow="rgba(56, 189, 248, 0.25)"
+      >
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-container">
+          <div class="profile-frame">
+            <img src="me.jpg" alt="Sarp Mataş" class="profile-img" />
+          </div>
+
+          <div class="about-text">
+            <p class="lead-text">
+              I am a Computer Engineering student at Ankara University. My
+              journey started with C and Python, and now I am focused on
+              creating "deep" and interactive experiences.
+            </p>
+
+            <div class="interests-grid">
+              <div class="interest-box">
+                <h3>🎥 Cinema</h3>
+                <p>Sci-Fi (Star Wars)</p>
+              </div>
+              <div class="interest-box">
+                <h3>💻 Hardware</h3>
+                <p>Overclocking</p>
+              </div>
+              <div class="interest-box">
+                <h3>🎮 Gaming</h3>
+                <p>Level Design</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="cv"
+        class="page-section"
+        data-color="#10b981"
+        data-glow="rgba(16, 185, 129, 0.25)"
+      >
+        <h2 class="section-title">Curriculum Vitae</h2>
+
+        <div class="cv-container">
+          <div class="cv-column">
+            <h3 class="cv-heading">🎓 Education & Experience</h3>
+            <div class="timeline-item">
+              <span class="year">2018 - 2022</span>
+              <h4>High School</h4>
+              <p class="institution">Nesibe Aydın Science High School</p>
+              <p class="desc">Science & Mathematics focus.</p>
+            </div>
+            <div class="timeline-item">
+              <span class="year">2022 - Present</span>
+              <h4>Computer Engineering</h4>
+              <p class="institution">Ankara University</p>
+              <p class="desc">
+                Bachelor's Degree. Focusing on Algorithms, Data Structures, and
+                Low-level Programming.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="year">2023 - Present</span>
+              <h4>Chairperson of Board</h4>
+              <p class="institution">AUCS (Computer Society)</p>
+              <p class="desc">
+                Managing community events, workshops, and student networking.
+              </p>
+            </div>
+          </div>
+
+          <div class="cv-column">
+            <h3 class="cv-heading">💻 Technical Skills</h3>
+            <div class="skills-wrapper">
+              <div class="skill-tag">C / C++</div>
+              <div class="skill-tag">Python</div>
+              <div class="skill-tag">JavaScript (ES6+)</div>
+              <div class="skill-tag">HTML5 & CSS3</div>
+              <div class="skill-tag">Git / GitHub</div>
+              <div class="skill-tag">VS Code</div>
+              <div class="skill-tag">Linux / Bash</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projects"
+        class="page-section"
+        data-color="#f97316"
+        data-glow="rgba(249, 115, 22, 0.25)"
+      >
+        <h2 class="section-title">Selected Works</h2>
+
+        <div class="cards-wrapper" id="cards">
+          <div class="card">
+            <div class="card-content">
+              <h3>MPL Compiler</h3>
+              <p>
+                A compiler project developed for a custom programming language
+                using Lex and Yacc. Includes syntax analysis.
+              </p>
+              <a
+                href="https://github.com/Dionysos22/MPL_Compiler"
+                target="_blank"
+                >View Code →</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>Portfolio v2</h3>
+              <p>
+                The website you are currently visiting. Built with modern CSS
+                techniques, "Spotlight" effects, and Single Page architecture.
+              </p>
+              <a href="#">Live Demo →</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <h3>AUCS Community</h3>
+              <p>
+                Management and organizational work for the Ankara University
+                Computer Society.
+              </p>
+              <a
+                href="https://www.linkedin.com/company/aucomputersociety"
+                target="_blank"
+                >Visit Page →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="page-section"
+        data-color="#f43f5e"
+        data-glow="rgba(244, 63, 94, 0.25)"
+      >
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Your Message..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div class="social-connect">
+    <h3>Or Connect Via</h3>
+    <div class="social-links-row">
+        <a href="https://linkedin.com/in/sarpmatas" target="_blank" class="social-icon" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        
+        <a href="https://github.com/Dionysos22" target="_blank" class="social-icon" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="mailto:sarpmatas0@gmail.com" class="social-icon" title="Send Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
+</div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <div class="social-container">
-        <h3>Beni Takip Edin</h3>
+      <div class="footer-content">
+        <p>© 2026 Sarp Mataş | Designed by <strong>Dionysos</strong></p>
+      </div>
+    </footer>
 
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/sarpmatas/" target="_blank">
-            🔗 LinkedIn
-          </a>
-
-          <a href="https://github.com/Dionysos22" target="_blank">
-            💻 GitHub
-          </a>
-
-          <a
-            href="https://www.linkedin.com/company/aucomputersociety"
-            target="_blank"
-          >
-            🎓 AUCS
-          </a>
+    <div class="terminal-toggle" title="Open Terminal">>_</div>
+    <div class="terminal-overlay" id="terminalOverlay">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <span class="terminal-title">user@dionysos:~</span>
+          <span class="terminal-close" id="closeTerminal">X</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="output">
+            <p style="color: var(--accent-color)">
+              Dionysos OS v1.0.0 initialized...
+            </p>
+            <p>Type <span class="cmd">help</span> to see available commands.</p>
+          </div>
+          <div class="input-line">
+            <span class="prompt">user@dionysos:~$</span>
+            <input type="text" id="terminalInput" autocomplete="off" />
+          </div>
         </div>
       </div>
-
-      <p style="margin-top: 15px">Tüm hakları saklıdır © 2026 Sarp Mataş</p>
-    </footer>
+    </div>
 
     <script src="js/script.js"></script>
   </body>
