@@ -158,3 +158,64 @@ document.addEventListener("DOMContentLoaded", () => {
     termOutput.appendChild(p);
   }
 });
+/* 
+   TITLE GÜNCELLEME
+    */
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+  const sections = document.querySelectorAll("section");
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    // Sayfanın 3'te 1'i bölüme girdiyse başlığı değiştir
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  // Baş harfi büyütme fonksiyonu
+  const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
+
+  if (currentSection) {
+    document.title = `${capitalize(currentSection)} | Sarp Mataş`;
+  } else {
+    document.title = "Sarp Mataş | Computer Engineer"; // En tepedeyken
+  }
+});
+/* 
+   İLETİŞİM FORMU DOĞRULAMA 
+   */
+const contactForm = document.querySelector(".contact-form"); // Formun class'ı bu olmalı
+
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Alanları seç
+    const nameInput = contactForm.querySelector('input[type="text"]');
+    const emailInput = contactForm.querySelector('input[type="email"]');
+    const messageInput = contactForm.querySelector("textarea");
+
+    // Basit Doğrulama
+    if (
+      nameInput.value.trim() === "" ||
+      emailInput.value.trim() === "" ||
+      messageInput.value.trim() === ""
+    ) {
+      alert("Lütfen tüm alanları doldurunuz! (Please fill all fields)");
+      return;
+    }
+
+    // Email formatı kontrolü (Regex)
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+      alert("Lütfen geçerli bir e-posta adresi giriniz!");
+      return;
+    }
+
+    // Başarılı
+    alert(`Teşekkürler ${nameInput.value}! Mesajınız alındı. (Demo)`);
+    contactForm.reset();
+  });
+}
