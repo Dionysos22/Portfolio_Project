@@ -9,8 +9,7 @@ A modern, high-performance personal portfolio website engineered from scratch us
 
 Unlike typical portfolios built with heavy frameworks, this project follows a **"Back to Basics"** philosophy, utilizing a **Multi-Page Architecture (MPA)** to demonstrate core DOM manipulation and efficient rendering skills.
 
-**Live Demo:** [https://github.com/Dionysos22/Portfolio_Project]([https://github.com/Dionysos22/Portfolio_Project](https://dionysos22.github.io/Portfolio_Project/index.html))
-
+**Live Demo:** [https://dionysos22.github.io/Portfolio_Project/](https://github.com/Dionysos22/Portfolio_Project)
 ---
 
 ## ✨ Key Features (v2)
