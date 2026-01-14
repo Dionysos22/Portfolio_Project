@@ -1,8 +1,3 @@
-/**
- * Student Portfolio Script (FINAL BİRLEŞTİRİLMİŞ VERSİYON)
- * Author: Sarp Mataş
- */
-
 document.addEventListener("DOMContentLoaded", () => {
   // ======================================================
   // 1. MOBİL MENÜ & NAVİGASYON
@@ -11,13 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector(".menu");
 
   if (hamburger && navMenu) {
-    // Menü aç/kapa
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     });
-
-    // Linke tıklanınca menüyü kapat
     document.querySelectorAll(".menu li a").forEach((link) => {
       link.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -25,8 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  // Auto-Active Link (Hangi sayfadaysan o linki yak)
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".menu li a").forEach((link) => {
     const linkPage = link.getAttribute("href");
@@ -112,8 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ======================================================
   // 5. ULTIMATE MODAL SYSTEM (PROJE DETAYLARI)
   // ======================================================
-
-  // A. Önce CSS'i ekleyelim (Eğer yoksa)
   if (!document.getElementById("modal-styles")) {
     const style = document.createElement("style");
     style.id = "modal-styles";
@@ -172,27 +160,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // C. Tıklama Olaylarını Bağla
   const modal = document.getElementById("project-modal");
   const closeBtn = document.querySelector(".close-modal");
-  // ÖNEMLİ: Hem .project-card hem de normal .card'ı kapsayalım ki hata olmasın
   const projectCards = document.querySelectorAll(
     ".project-card, .card[data-title]"
   );
 
   projectCards.forEach((card) => {
     card.addEventListener("click", () => {
-      // Verileri Al
       const title = card.getAttribute("data-title") || "Proje";
       const status = card.getAttribute("data-status") || "Belirsiz";
       const desc = card.getAttribute("data-desc") || "Açıklama yok.";
       const tech = card.getAttribute("data-tech") || "";
       const link = card.getAttribute("data-link") || "#";
-
-      // Verileri Yerleştir
       document.getElementById("m-title").innerText = title;
       document.getElementById("m-status").innerText = status;
       document.getElementById("m-desc").innerText = desc;
       document.getElementById("m-link").href = link;
-
-      // Teknolojileri Listele
       const techList = document.getElementById("m-tech-list");
       techList.innerHTML = "";
       tech.split(",").forEach((t) => {
@@ -202,13 +184,9 @@ document.addEventListener("DOMContentLoaded", () => {
           techList.appendChild(span);
         }
       });
-
-      // Aç
       modal.classList.add("show");
     });
   });
-
-  // Kapatma
   const closeModal = () => modal.classList.remove("show");
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   window.addEventListener("click", (e) => {
@@ -228,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const ctx = canvas.getContext("2d");
   let width, height, particles;
-  const particleCount = 40; // Sayıyı azalttım (Daha performanslı)
+  const particleCount = 40;
   const connectionDistance = 140;
 
   function resize() {

@@ -34,7 +34,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #fff;
 }
-/* Yumuşak Kaydırma ve Renk Geçişleri */
 html {
   scroll-behavior: smooth;
 }
@@ -66,8 +65,6 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Hareketli Izgara Arka Plan */
   background-image: linear-gradient(
       rgba(15, 23, 42, 0.95),
       rgba(15, 23, 42, 0.95)
@@ -108,10 +105,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* Kenarlardan (Sağ/Sol) boşluğu artırıyoruz */
   padding: 0 40px;
-  height: 100%; /* Header yüksekliğine uysun */
+  height: 100%;
 }
 
 .logo {
@@ -124,13 +119,11 @@ nav {
   z-index: 1001;
 }
 .logo a {
-  display: flex !important; /* Yan yana dizilim */
+  display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
   color: inherit;
-
-  /* 2. KURAL: Metin asla alt satıra inmesin */
   white-space: nowrap;
 }
 .menu {
@@ -215,9 +208,7 @@ nav {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-/* 
-   SAYFA BÖLÜMLERİ
-  */
+
 /* =========================================
    SAYFA BÖLÜMLERİ VE DÜZEN (GÜNCEL)
    ========================================= */
@@ -228,31 +219,25 @@ main {
   padding: 0 20px;
 }
 
-/* Tüm sayfalar için standart yapı */
 .page-section {
-  min-height: 100vh; /* Sayfa en az ekran boyu kadar olsun */
-  padding: 120px 0 60px 0; /* Üstten 120px boşluk (Menü payı), alttan 60px */
-  /* display: flex; ve justify-content: center; kaldırdık! */
+  min-height: 100vh;
+  padding: 120px 0 60px 0;
 }
-
-/* Sadece Ana Sayfa (Home) yine tam ortada dursun */
 /* SADECE ANA SAYFA (HOME) - SOLA HİZALI */
 .hero-section {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Dikeyde (yukarı-aşağı) ortada kalsın */
-  align-items: flex-start; /* Yatayda (sağ-sol) EN SOLA yasla */
+  justify-content: center;
+  align-items: flex-start;
   height: 100vh;
   padding-top: 0;
-  text-align: left; /* Yazıları sola blokla */
+  text-align: left;
 }
 
-/* Menü altındaki çizgi veya gölgeyi sabitlemek için Header ayarı */
 header {
-  height: 80px; /* Menüye sabit yükseklik verelim ki oynamasın */
+  height: 80px;
   display: flex;
-  align-items: center; /* İçindekileri ortala */
-  /* Diğer özellikleri (fixed, background vb.) aynen kalsın */
+  align-items: center;
 }
 
 /* Hero */
@@ -365,27 +350,22 @@ header {
 /* Projects */
 .cards-wrapper {
   display: grid;
-  /* Ekran genişliğine göre sığabildiği kadar sütun aç (Responsive) */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px; /* Kartlar arası boşluk */
-  justify-items: center; /* Kartları ortala */
+  gap: 30px;
+  justify-items: center;
   padding: 20px;
 }
 .card {
-  /* Eski height: 300px kodunu SİLİYORUZ */
-  height: auto !important; /* İçerik ne kadarsa o kadar uzasın */
-  min-height: 300px; /* Ama en az 300px boyunda olsun */
-
-  /* Genişliği biraz artıralım ki sığsın */
-  width: 100%; /* Kapsayıcıya göre hareket etsin */
-  max-width: 380px; /* Çok da genişlemesin */
-
+  height: auto !important;
+  min-height: 300px;
+  width: 100%;
+  max-width: 380px;
   background: rgba(255, 255, 255, 0.02);
   border-radius: 12px;
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: visible; /* Taşan gölgeler kesilmesin */
+  overflow: visible;
   transition: all 0.5s ease;
 }
 .card::before {
@@ -607,11 +587,11 @@ footer {
   50% {
     transform: scale(1.02);
     letter-spacing: 1px;
-  } /* Çok azıcık büyür ve açılır */
+  }
   100% {
     transform: scale(1);
     letter-spacing: normal;
-  } /* Geri döner */
+  }
 }
 
 /* Ana Başlık (Sarp Mataş) ve Bölüm Başlıkları için */
@@ -622,27 +602,24 @@ footer {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  /* Hafif bir parlama ekleyelim */
   filter: drop-shadow(0 0 20px rgba(217, 70, 239, 0.2));
 }
 /* =========================================
    GELİŞMİŞ PROJE KARTLARI (projects.html)
    ========================================= */
-
-/* Kartın kendisi (Glassmorphism + Spotlight uyumlu) */
 .project-card {
-  background: rgba(30, 41, 59, 0.4) !important; /* Daha şeffaf */
+  background: rgba(30, 41, 59, 0.4) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  height: auto !important; /* İçerik kadar uzasın */
+  height: auto !important;
   min-height: 320px;
   justify-content: flex-start !important;
 }
 
 /* Kart İçeriği Düzeni */
 .card-content {
-  background: transparent !important; /* Arka planı üstten alsın */
+  background: transparent !important;
   padding: 25px !important;
   height: 100%;
   display: flex;
@@ -676,7 +653,7 @@ footer {
   color: #fff;
 }
 
-/* Durum Rozeti (Completed / Ongoing) */
+/* Durum Rozeti  */
 .status-badge {
   font-size: 0.7rem;
   padding: 3px 8px;
@@ -702,7 +679,7 @@ footer {
   color: #94a3b8;
   line-height: 1.6;
   margin-bottom: 20px !important;
-  flex-grow: 1; /* Boşluğu doldursun */
+  flex-grow: 1;
 }
 
 /* 3. Alt Kısım: Teknoloji Etiketleri */
@@ -726,10 +703,10 @@ footer {
 
 .project-card:hover .tech-stack span {
   border-color: var(--accent-color);
-  background: rgba(217, 70, 239, 0.1); /* Hafif mor/turuncu */
+  background: rgba(217, 70, 239, 0.1);
 }
 
-/* 4. En Alt: Butonlar */
+/*Butonlar */
 .card-actions {
   margin-top: auto;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -744,7 +721,7 @@ footer {
   color: #e2e8f0 !important;
   text-decoration: none;
   transition: 0.3s;
-  border-bottom: none !important; /* Eski stili iptal et */
+  border-bottom: none !important;
 }
 
 .btn-source:hover {
@@ -753,7 +730,7 @@ footer {
 }
 /* KARTLARIN DÜZENİ */
 .project-card {
-  cursor: pointer; /* Tıklanabilir el işareti */
+  cursor: pointer;
   height: auto !important;
   min-height: 250px;
   transition: transform 0.3s ease, border-color 0.3s ease;
@@ -771,15 +748,15 @@ footer {
 
 /* MODAL (POPUP) TASARIMI */
 .modal {
-  display: none; /* Başlangıçta gizli */
+  display: none;
   position: fixed;
   z-index: 9999;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Arka planı karart */
-  backdrop-filter: blur(5px); /* Arka planı bulanıklaştır */
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -787,7 +764,7 @@ footer {
 }
 
 .modal.show {
-  display: flex; /* Açılınca görünür yap */
+  display: flex;
   opacity: 1;
 }
 
@@ -805,7 +782,7 @@ footer {
 }
 
 .modal.show .modal-content {
-  transform: scale(1); /* Büyüyerek açılma efekti */
+  transform: scale(1);
 }
 
 /* Kapatma Çarpısı */
@@ -868,23 +845,22 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Her şeyin arkasında dursun */
-  pointer-events: none; /* Tıklamayı engellemesin */
-  opacity: 0.6; /* Çok baskın olmasın */
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
 }
 /* INFINITE SCROLL BAR */
 .tech-marquee {
   width: 100%;
-  overflow: hidden; /* Taşanları gizle */
+  overflow: hidden;
   padding: 20px 0;
-  margin-top: 50px; /* İsimden biraz uzaklaşsın */
+  margin-top: 50px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
-/* Kenarları hafif silikleştir (Fade Effect) */
 .tech-marquee::before,
 .tech-marquee::after {
   content: "";
@@ -905,13 +881,13 @@ footer {
 
 .track {
   display: flex;
-  width: max-content; /* İçerik kadar genişle */
+  width: max-content;
   animation: scroll 20s linear infinite;
 }
 
 .tech-marquee .content {
   display: flex;
-  gap: 50px; /* Öğeler arası boşluk */
+  gap: 50px;
   padding-right: 50px;
 }
 
@@ -935,50 +911,45 @@ footer {
   }
   100% {
     transform: translateX(-50%);
-  } /* Yarısına kadar kaydır */
+  }
 }
-/* =========================================
-   FOTOĞRAFI YUKARI ÇEKME (DÜZELTİLMİŞ KOD)
-   ========================================= */
-
-/* 1. Önce kapsayıcıyı (about-container) en tepeye hizala */
+/* ==========
+   FOTOĞRAF
+   ========== */
 .about-container {
   align-items: flex-start !important;
-  position: relative; /* Z-index çalışsın diye */
+  position: relative;
 }
 
-/* 2. Fotoğraf Kutusunu (profile-frame) yukarı çek */
+/* 2. Fotoğraf Kutusu */
 .profile-frame {
-  /* Buradaki -60px değerini artırarak (örn: -80px) fotoğrafı daha da yukarı alabilirsin */
   margin-top: 20px !important;
-
-  /* Fotoğraf yazının arkasında kalmasın */
   z-index: 10;
   position: relative;
 }
 
-/* 3. Mobilde (Telefonda) bozulmasın, normale dönsün */
+/* 3. Mobil */
 @media (max-width: 768px) {
   .profile-frame {
-    margin-top: 0 !important; /* Mobilde yukarı çekme işlemini iptal et */
+    margin-top: 0 !important;
     margin-bottom: 20px;
   }
 
   .about-container {
-    align-items: center !important; /* Mobilde tekrar ortala */
+    align-items: center !important;
   }
 }
 /* HERO BÖLÜMÜNDEKİ SOSYAL İKONLAR */
 .hero-socials {
-  margin-top: 25px; /* Yazıdan biraz uzaklaşsın */
+  margin-top: 25px;
   display: flex;
-  gap: 20px; /* İkonlar arası boşluk */
+  gap: 20px;
   align-items: center;
 }
 
 .hero-socials a {
-  font-size: 1.8rem; /* İkon boyutu */
-  color: #94a3b8; /* Pasif renk (Gri) */
+  font-size: 1.8rem;
+  color: #94a3b8;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -986,7 +957,7 @@ footer {
 }
 
 .hero-socials a:hover {
-  color: var(--accent-color); /* Temanın rengi (Mor/Pembe) */
-  transform: translateY(-3px); /* Hafif yukarı zıplama */
-  text-shadow: 0 0 15px var(--glow-color); /* Neon parlaması */
+  color: var(--accent-color);
+  transform: translateY(-3px);
+  text-shadow: 0 0 15px var(--glow-color);
 }
