@@ -195,12 +195,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
-});
-
-// ======================================================
-// 6. NEURAL NETWORK BACKGROUND (Canvas)
-// ======================================================
-document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("neural-canvas");
   if (!canvas) return;
 
