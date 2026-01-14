@@ -1,4 +1,4 @@
-# 👨‍💻 Sarp Mataş (Dionysos) - Personal Portfolio v2
+# 👨‍💻 Sarp Mataş (Dionysos) - Personal Portfolio Page
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -9,7 +9,7 @@ A modern, high-performance personal portfolio website engineered from scratch us
 
 Unlike typical portfolios built with heavy frameworks, this project follows a **"Back to Basics"** philosophy, utilizing a **Multi-Page Architecture (MPA)** to demonstrate core DOM manipulation and efficient rendering skills.
 
-**Live Demo:** [https://dionysos22.github.io/sarpmatas-portfolio/](https://dionysos22.github.io/sarpmatas-portfolio/)
+**Live Demo:** [https://github.com/Dionysos22/Portfolio_Project](https://github.com/Dionysos22/Portfolio_Project)
 
 ---
 
@@ -65,6 +65,8 @@ Migrated from a Single Page Application (SPA) to a robust Multi-Page structure t
 │   └── script.js     # Logic (Modals, Canvas, Menu)
 │
 └── README.md         # Documentation
+```
+
 ## 📬 Contact
 
 Feel free to reach out for collaboration or just to say hi!
@@ -78,4 +80,3 @@ Feel free to reach out for collaboration or just to say hi!
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
-```
