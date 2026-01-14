@@ -502,14 +502,17 @@ footer {
     */
 .about-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   max-width: 900px;
+  position: relative;
 }
 
 .profile-frame {
   flex-shrink: 0;
   position: relative;
+  margin-top: 20px;
+  z-index: 10;
 }
 
 .profile-img {
@@ -517,10 +520,8 @@ footer {
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-
   border: 4px solid var(--accent-color);
   box-shadow: 0 0 20px var(--glow-color);
-
   transition: all 0.5s ease;
 }
 
@@ -528,7 +529,6 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 0 40px var(--accent-color);
 }
-
 /* MOBİL UYUMLULUK */
 @media (max-width: 768px) {
   .about-container {
@@ -912,20 +912,6 @@ footer {
   100% {
     transform: translateX(-50%);
   }
-}
-/* ==========
-   FOTOĞRAF
-   ========== */
-.about-container {
-  align-items: flex-start !important;
-  position: relative;
-}
-
-/* 2. Fotoğraf Kutusu */
-.profile-frame {
-  margin-top: 20px !important;
-  z-index: 10;
-  position: relative;
 }
 
 /* 3. Mobil */
