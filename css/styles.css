@@ -968,3 +968,25 @@ footer {
     align-items: center !important; /* Mobilde tekrar ortala */
   }
 }
+/* HERO BÖLÜMÜNDEKİ SOSYAL İKONLAR */
+.hero-socials {
+  margin-top: 25px; /* Yazıdan biraz uzaklaşsın */
+  display: flex;
+  gap: 20px; /* İkonlar arası boşluk */
+  align-items: center;
+}
+
+.hero-socials a {
+  font-size: 1.8rem; /* İkon boyutu */
+  color: #94a3b8; /* Pasif renk (Gri) */
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-socials a:hover {
+  color: var(--accent-color); /* Temanın rengi (Mor/Pembe) */
+  transform: translateY(-3px); /* Hafif yukarı zıplama */
+  text-shadow: 0 0 15px var(--glow-color); /* Neon parlaması */
+}
