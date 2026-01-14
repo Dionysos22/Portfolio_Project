@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Sarp Mataş</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Consolas&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      :root {
+        --accent-color: #38bdf8;
+        --glow-color: rgba(56, 189, 248, 0.25);
+      }
+      /* About Sayfasına Özel Ufak Ayarlar */
+      .bio-text {
+        color: #94a3b8;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+      .bio-highlight {
+        color: #fff;
+        font-weight: 600;
+      }
+      .stack-list {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .stack-item {
+        color: var(--accent-color);
+        font-family: "Consolas", monospace;
+        font-size: 0.9rem;
+        background: rgba(56, 189, 248, 0.1);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo" class="nav-icon" /> Sarp Mataş
+          </a>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <h2 class="section-title">Who is Dionysos?</h2>
+        <div class="about-container">
+          <div class="profile-frame">
+            <img src="me.jpg" alt="Sarp Mataş" class="profile-img" />
+          </div>
+          <div class="about-text">
+            <h3 style="color: #fff; margin-bottom: 15px">
+              Architecting Efficient Code.
+            </h3>
+            <p class="bio-text">
+              Hello! I'm <span class="bio-highlight">Sarp Mataş</span> (aka
+              Dionysos), a Computer Engineering student at Ankara University. My
+              passion lies in the logic behind the software; understanding not
+              just how to write code, but how to structure it for maximum
+              efficiency.
+            </p>
+            <p class="bio-text">
+              With a strong analytical foundation from Nesibe Aydın Science High
+              School, I focus on <strong>Software Architecture</strong> and
+              <strong>Algorithm Design</strong>. Whether I'm building complex
+              systems in <strong>C</strong> or developing modern applications
+              with <strong>Python</strong>, my goal is simple: to create
+              scalable, reliable, and clean software solutions that stand the
+              test of time.
+            </p>
+
+            <h4 style="color: #fff; margin-top: 25px; font-size: 1.1rem">
+              My Toolkit
+            </h4>
+            <div class="stack-list">
+              <span class="stack-item">#C</span>
+              <span class="stack-item">#JavaScript</span>
+              <span class="stack-item">#Python</span>
+              <span class="stack-item">#Linux</span>
+              <span class="stack-item">#Git</span>
+              <span class="stack-item">#Algorithms</span>
+            </div>
+
+            <div class="interests-grid" style="margin-top: 30px">
+              <div class="interest-box">
+                <h3>⚡ Hardware</h3>
+                <p>System Building & Technology Enthusiast.</p>
+              </div>
+
+              <div class="interest-box">
+                <h3>🎥 Cinema</h3>
+                <p>Star Wars Universe, The Prestige & Sci-Fi.</p>
+              </div>
+
+              <div class="interest-box">
+                <h3>🏁 Sports</h3>
+                <p>Formula 1 Racing & Football follower.</p>
+              </div>
+
+              <div class="interest-box">
+                <h3>🎮 Gaming</h3>
+                <p>Grand Strategy (Hearts of Iron IV) & Simulation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Sarp Mataş | Designed by <strong>Dionysos</strong></p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

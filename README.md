@@ -3,50 +3,49 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
 
-A modern, **Single Page Application (SPA)** portfolio website designed with a focus on interactive UX and visual depth. This project showcases advanced CSS techniques and JavaScript-based dynamic theming.
+A modern, high-performance personal portfolio website engineered from scratch using **Vanilla JavaScript**, **HTML5**, and **Modern CSS3**.
 
-**Live Demo:** [https://dionysos22.github.io/Portfolio_Project/](https://dionysos22.github.io/Portfolio_Project/)
+Unlike typical portfolios built with heavy frameworks, this project follows a **"Back to Basics"** philosophy, utilizing a **Multi-Page Architecture (MPA)** to demonstrate core DOM manipulation and efficient rendering skills.
+
+**Live Demo:** [https://dionysos22.github.io/sarpmatas-portfolio/](https://dionysos22.github.io/sarpmatas-portfolio/)
 
 ---
 
 ## ✨ Key Features (v2)
 
-### 🎨 Chameleon Theme Engine
+### 🧠 Neural Network Animation
 
-The website dynamically changes its **accent color** and **glow effects** based on the currently viewed section.
+The background features a custom particle system powered by the **HTML5 Canvas API**. It calculates geometry in real-time to create a connecting "constellation" effect that reacts to screen resizing.
 
-- **Home:** Purple (Cyberpunk)
-- **About:** Blue (Professional)
-- **CV:** Green (Growth)
-- **Projects:** Orange (Creativity)
-- **Contact:** Red/Pink (Attention)
+### 🪟 Custom Modal System
 
-### 🔦 Spotlight Effect
+Instead of simple links, project details are displayed via a custom-written **JavaScript Modal System**. This allows for a clean UI where users can view technical details without leaving the context of the page.
 
-Project cards feature a **mouse-tracking radial gradient** that creates a "flashlight" effect, revealing borders and depth as the user hovers over them.
+### ⚡ Multi-Page Architecture (MPA)
 
-### 🖥️ Interactive Terminal (CLI)
+Migrated from a Single Page Application (SPA) to a robust Multi-Page structure to improve SEO, semantic hierarchy, and organized code management.
 
-A hidden Easter egg for geeks! Click the `>_` button to open a fully functional CLI simulation.
+- `index.html` (Home)
+- `about.html` (Bio)
+- `cv.html` (Timeline)
+- `projects.html` (Showcase)
 
-- **Font:** JetBrains Mono (with neon glow)
-- **Commands:** `help`, `whoami`, `github`, `contact`, `clear`
+### 🔦 Spotlight & Glassmorphism
 
-### 📱 Fully Responsive & SPA
-
-- Migrated from multi-file structure to a single `index.html`.
-- Smooth scrolling navigation with active state detection (Scroll Spy).
-- Custom glassmorphism header and hamburger menu for mobile devices.
+- **Spotlight Effect:** Project cards feature a mouse-tracking radial gradient that creates a "flashlight" depth effect.
+- **Glassmorphism:** The UI utilizes backdrop-filters to create a modern, translucent aesthetic suitable for dark mode.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Core:** HTML5, CSS3, JavaScript (ES6+)
+- **Architecture:** Multi-Page Application (MPA)
 - **Styling:** CSS Variables, Flexbox, Grid, Keyframe Animations
 - **Icons:** Font Awesome 6
-- **Fonts:** Poppins (UI), JetBrains Mono (Terminal), Consolas (Code)
+- **Fonts:** Poppins (UI), Consolas (Code)
 
 ---
 
@@ -55,15 +54,17 @@ A hidden Easter egg for geeks! Click the `>_` button to open a fully functional 
 ```text
 /Portfolio_Project
 │
-├── index.html        # Main Entry (Single Page)
+├── index.html        # Home Page (Hero & Neural BG)
+├── about.html        # About Me (Bio & Interests)
+├── cv.html           # Curriculum Vitae (Timeline)
+├── projects.html     # Selected Works (Grid & Modals)
+├── contact.html      # Contact Form (Frontend Validation)
 ├── css/
-│   └── styles.css    # Global Styles & Theming
+│   └── styles.css    # Global Styles & Glassmorphism
 ├── js/
-│   └── script.js     # Logic (ScrollSpy, Terminal, Spotlight)
+│   └── script.js     # Logic (Modals, Canvas, Menu)
 │
 └── README.md         # Documentation
-```
-
 ## 📬 Contact
 
 Feel free to reach out for collaboration or just to say hi!
@@ -77,3 +78,4 @@ Feel free to reach out for collaboration or just to say hi!
 
 > "Talk is cheap. Show me the code."
 > — _Linus Torvalds_
+```

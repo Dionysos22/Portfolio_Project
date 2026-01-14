@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Sarp Mataş</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Consolas&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      :root {
+        --accent-color: #10b981;
+        --glow-color: rgba(16, 185, 129, 0.25);
+      }
+      /* CV Detayları için Ekstra Stil */
+      .cv-list { list-style: disc; padding-left: 20px; color: #94a3b8; margin-top: 10px; font-size: 0.9rem; }
+      .cv-list li { margin-bottom: 5px; }
+      .skill-category { margin-bottom: 20px; }
+      .skill-category h4 { color: #fff; font-size: 1rem; margin-bottom: 10px; font-weight: 600; }
+      
+      /* Link Butonları İçin Özel Ayar */
+      a.skill-tag { text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+      a.skill-tag:hover { background: rgba(16, 185, 129, 0.1); transform: translateY(-2px); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="logo.png" alt="Logo" class="nav-icon" /> Sarp Mataş
+          </a>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span><span class="bar"></span
+          ><span class="bar"></span>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cv.html" class="active">CV</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-section">
+        <section class="page-section">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+             <h2 class="section-title" style="margin-bottom:0;">Curriculum Vitae</h2>
+             
+        </div>
+
+        <div class="cv-container">
+          <div class="cv-column">
+            <h3 class="cv-heading">🎓 Education & Experience</h3>
+            <div class="timeline-item">
+              <span class="year">2020 - 2024</span>
+              <h4>High School</h4>
+              <p class="institution">Nesibe Aydın Science High School</p>
+              <p class="desc"></p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="year">2024 - Present</span>
+              <h4>B.S. Computer Engineering</h4>
+              <p class="institution">Ankara University</p>
+              <p class="desc">Focused on Low-level Programming & Systems.</p>
+              <ul class="cv-list">
+                <li>
+                  <strong>Relevant Coursework:</strong> Data Structures, Digital
+                  Logic Design, Discrete Mathematics, Programming Language
+                  Concepts, File Organization .
+                </li>
+                <li>Active member of the Computer Society.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <span class="year">2025 - Present</span>
+              <h4>Chairperson (Leadership)</h4>
+              <p class="institution">
+                AUCS (Ankara University Computer Society)
+              </p>
+              <ul class="cv-list">
+                <li>Leading a student community of 800+ members.</li>
+                <li>Organized tech workshops, hackathons, and seminars.</li>
+                <li>Managed team coordination and event planning logistics.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cv-column">
+            <h3 class="cv-heading">💻 Technical Arsenal</h3>
+
+            <div class="skill-category">
+              <h4>PROGRAMMING LANGUAGES</h4>
+              <div class="skills-wrapper">
+                <div class="skill-tag">C</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">JavaScript (ES6+)</div>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>TOOLS & PLATFORMS</h4>
+              <div class="skills-wrapper">
+                <div class="skill-tag">Git / GitHub</div>
+                <div class="skill-tag">Linux / Bash</div>
+                <div class="skill-tag">VS Code</div>
+                <div class="skill-tag">PyCharm</div>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h4>SOFT SKILLS</h4>
+              <div class="skills-wrapper">
+                <div class="skill-tag">Leadership</div>
+                <div class="skill-tag">Team Management</div>
+                <div class="skill-tag">Problem Solving</div>
+                <div class="skill-tag">Public Speaking</div>
+              </div>
+            </div>
+            <div class="skill-category">
+                <h4>ONLINE PRESENCE & PORTFOLIO</h4>
+                <div class="skills-wrapper">
+                  <a href="projects.html" class="skill-tag" style="border-color: var(--accent-color); color: var(--accent-color);">
+                    <i class="fa-solid fa-layer-group"></i> View My Projects
+                  </a>
+                  
+                  <a href="https://linkedin.com/in/sarpmatas" target="_blank" class="skill-tag">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                  </a>
+                  
+                  <a href="https://github.com/Dionysos22" target="_blank" class="skill-tag">
+                    <i class="fa-brands fa-github"></i> GitHub
+                  </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Sarp Mataş | Designed by <strong>Dionysos</strong></p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
