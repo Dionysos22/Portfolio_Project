@@ -30,7 +30,7 @@ Migrated from a Single Page Application (SPA) to a robust Multi-Page structure t
 - `index.html` (Home)
 - `about.html` (Bio)
 - `cv.html` (Timeline)
-- `projects.html` (Showcase: Sheeple, Formula 1 Stats App, MPL Compiler)
+- `projects.html` (Showcase: Sheeple, 3·2·1 Futbol, Formula 1 Stats App, MPL Compiler)
 
 ### 🔦 Spotlight & Glassmorphism
 
