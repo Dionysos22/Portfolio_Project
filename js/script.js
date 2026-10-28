@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (textElement) {
     const texts = [
       "Dionysos",
-      "Developer",
-      "Tech Enthusiast",
+      "Founder of Sheeple",
+      "Mobile & Full-Stack Developer",
       "Lifelong Learner",
     ];
     let count = 0,
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a id="m-link" href="#" target="_blank" class="modal-btn"><i class="fa-brands fa-github"></i> Code</a>
+                    <a id="m-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn"><i class="fa-brands fa-github"></i> Code</a>
                 </div>
               </div>
             </div>`;
@@ -177,7 +177,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("m-title").innerText = title;
       document.getElementById("m-status").innerText = status;
       document.getElementById("m-desc").innerText = desc;
-      document.getElementById("m-link").href = link;
+      const linkEl = document.getElementById("m-link");
+      linkEl.href = link;
+      linkEl.innerHTML = card.hasAttribute("data-link-label")
+        ? `<i class="fa-solid fa-arrow-up-right-from-square"></i> ${card.getAttribute("data-link-label")}`
+        : `<i class="fa-brands fa-github"></i> Code`;
       const techList = document.getElementById("m-tech-list");
       techList.innerHTML = "";
       tech.split(",").forEach((t) => {
