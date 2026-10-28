@@ -94,7 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please enter a valid email address.");
         return;
       }
-      alert(`Thanks ${name}! Your message has been received.`);
+      // Backend yok: mesajı kullanıcının mail istemcisinde hazır olarak aç
+      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+      const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+      window.location.href = `mailto:sarpmatas0@gmail.com?subject=${subject}&body=${body}`;
       contactForm.reset();
     });
   }
@@ -166,9 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   projectCards.forEach((card) => {
     card.addEventListener("click", () => {
-      const title = card.getAttribute("data-title") || "Proje";
-      const status = card.getAttribute("data-status") || "Belirsiz";
-      const desc = card.getAttribute("data-desc") || "Açıklama yok.";
+      const title = card.getAttribute("data-title") || "Project";
+      const status = card.getAttribute("data-status") || "Unknown";
+      const desc = card.getAttribute("data-desc") || "No description.";
       const tech = card.getAttribute("data-tech") || "";
       const link = card.getAttribute("data-link") || "#";
       document.getElementById("m-title").innerText = title;
@@ -202,6 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let width, height, particles;
   const particleCount = 40;
   const connectionDistance = 140;
+  const accentColor = getComputedStyle(document.documentElement)
+    .getPropertyValue("--accent-color")
+    .trim();
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -221,9 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (this.y < 0 || this.y > height) this.vy *= -1;
     }
     draw() {
-      ctx.fillStyle = getComputedStyle(document.documentElement)
-        .getPropertyValue("--accent-color")
-        .trim();
+      ctx.fillStyle = accentColor;
       ctx.beginPath();
       ctx.arc(this.x, this.y, 1.5, 0, Math.PI * 2);
       ctx.fill();
