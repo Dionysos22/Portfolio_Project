@@ -1156,3 +1156,96 @@ textarea:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* CV yazdırma / PDF */
+.print-only {
+  display: none;
+}
+.print-cv {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+@media print {
+  @page {
+    margin: 14mm;
+  }
+  body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 10.5pt;
+  }
+  header,
+  footer,
+  #neural-canvas,
+  .print-cv,
+  .section-title,
+  .skill-category:last-child {
+    display: none !important;
+  }
+  .page-section {
+    min-height: 0;
+    padding: 0;
+  }
+  .section-title,
+  .cv-column h3.cv-heading,
+  .timeline-item h4,
+  .skill-category h4 {
+    background: none !important;
+    -webkit-text-fill-color: #111 !important;
+    color: #111 !important;
+    filter: none !important;
+  }
+  .cv-container {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+  }
+  .cv-column h3.cv-heading {
+    font-size: 13pt;
+    margin-bottom: 10px;
+    border-bottom-color: #111;
+  }
+  .timeline-item {
+    margin-bottom: 12px;
+    border-left-color: #ccc;
+    break-inside: avoid;
+  }
+  .timeline-item::before {
+    background: #111;
+  }
+  .timeline-item .year {
+    color: #444;
+  }
+  .institution,
+  .desc,
+  .cv-list,
+  .cv-list li {
+    color: #333 !important;
+  }
+  .skill-tag {
+    color: #111 !important;
+    border-color: #bbb !important;
+    background: none !important;
+    padding: 3px 8px;
+    font-size: 9pt;
+  }
+  .skill-category {
+    margin-bottom: 10px;
+  }
+  .print-only {
+    display: block;
+  }
+  .cv-print-head {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #111;
+  }
+  .cv-print-head h1 {
+    font-size: 22pt;
+    line-height: 1.1;
+    color: #111;
+  }
+  .cv-print-head p {
+    color: #333;
+    font-size: 10pt;
+  }
+}

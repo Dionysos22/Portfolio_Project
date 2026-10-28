@@ -32,6 +32,10 @@ Migrated from a Single Page Application (SPA) to a robust Multi-Page structure t
 - `cv.html` (Timeline)
 - `projects.html` (Showcase: Sheeple, 3·2·1 Futbol, Formula 1 Stats App, MPL Compiler)
 
+### 🖨️ Printable CV
+
+The CV page has a "Save as PDF" button backed by a dedicated print stylesheet, so the same page doubles as a clean one-click PDF résumé.
+
 ### 🔦 Spotlight & Glassmorphism
 
 - **Spotlight Effect:** Project cards feature a mouse-tracking radial gradient that creates a "flashlight" depth effect.
@@ -58,7 +62,10 @@ Migrated from a Single Page Application (SPA) to a robust Multi-Page structure t
 ├── about.html        # About Me (Bio & Interests)
 ├── cv.html           # Curriculum Vitae (Timeline)
 ├── projects.html     # Selected Works (Grid & Modals)
-├── contact.html      # Contact Form (Frontend Validation)
+├── contact.html      # Contact Form (opens a prefilled email)
+├── 404.html          # Custom Not Found page
+├── robots.txt        # Crawler rules + sitemap link
+├── sitemap.xml       # Sitemap for search engines
 ├── css/
 │   └── styles.css    # Global Styles & Glassmorphism
 ├── js/
