@@ -168,6 +168,14 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   projectCards.forEach((card) => {
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        card.click();
+      }
+    });
     card.addEventListener("click", () => {
       const title = card.getAttribute("data-title") || "Project";
       const status = card.getAttribute("data-status") || "Unknown";
