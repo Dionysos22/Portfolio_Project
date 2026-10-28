@@ -9,7 +9,7 @@ A modern, high-performance personal portfolio website engineered from scratch us
 
 Unlike typical portfolios built with heavy frameworks, this project follows a **"Back to Basics"** philosophy, utilizing a **Multi-Page Architecture (MPA)** to demonstrate core DOM manipulation and efficient rendering skills.
 
-**Live Demo:** [http://dionysos.codes/](http://dionysos.codes/)
+**Live Demo:** [https://dionysos.codes/](https://dionysos.codes/)
 
 ---
 
@@ -30,7 +30,7 @@ Migrated from a Single Page Application (SPA) to a robust Multi-Page structure t
 - `index.html` (Home)
 - `about.html` (Bio)
 - `cv.html` (Timeline)
-- `projects.html` (Showcase)
+- `projects.html` (Showcase: Sheeple, 3·2·1 Futbol, Formula 1 Stats App, MPL Compiler)
 
 ### 🔦 Spotlight & Glassmorphism
 

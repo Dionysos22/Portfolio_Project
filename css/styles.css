@@ -637,6 +637,7 @@ footer {
 .icon-box {
   width: 45px;
   height: 45px;
+  flex-shrink: 0;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   display: flex;

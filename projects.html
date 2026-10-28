@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selected projects by Sarp Mataş: Sheeple, 3·2·1 Futbol, a Formula 1 stats app, the MPL compiler and this portfolio." />
+    <link rel="canonical" href="https://dionysos.codes/projects.html" />
     <title>Projects | Sarp Mataş</title>
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -56,6 +58,74 @@
       <section class="page-section">
         <h2 class="section-title">Selected Works</h2>
         <div class="cards-wrapper" id="cards">
+
+  <div class="card project-card"
+     data-title="Sheeple"
+     data-status="Closed Beta"
+     data-desc="An 'anti-swipe' matchmaking app for university students in Türkiye. Nobody picks for themselves: users act as 'Sheeppers' who match two other people, and a chat opens only when both sides accept. I'm the founder and sole developer. The mobile app is built with React Native (Expo) and TypeScript; the backend runs on Supabase with 120+ PostgreSQL migrations protected by row-level security and 6 edge functions (campus-email OTP verification, push notifications, photo moderation, account deletion and more). A Next.js marketing site and admin panel run on Vercel, and a GitHub Actions + EAS pipeline ships builds straight to the store test tracks. Currently in closed testing on Google Play and TestFlight."
+     data-tech="TypeScript, React Native (Expo), Supabase, PostgreSQL, Edge Functions, Next.js, Vercel, GitHub Actions, EAS, Jest"
+     data-link="https://sheepleapp.com"
+     data-link-label="Website">
+
+  <div class="card-content">
+    <div class="icon-box"><i class="fa-solid fa-people-arrows"></i></div>
+    <h3>Sheeple</h3>
+    <p>Anti-swipe matchmaking app for university students.</p>
+
+    <div class="tech-stack">
+        <span>React Native</span>
+        <span>Supabase</span>
+        <span>Next.js</span>
+    </div>
+
+    <span class="click-hint">Click for details <i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+</div>
+
+  <div class="card project-card"
+     data-title="3·2·1 Futbol"
+     data-status="Live"
+     data-desc="A team project where I contributed to development and to launching the game. A real-time multiplayer football trivia game, playable in the browser and as a mobile app. Two sides secretly pick a team (a country or a club), the teams are revealed together on '3-2-1', and the first to name a player who has played for both scores the point. It has ranked 1v1 matches with Elo, 2v2, a 3×3 grid mode, single-player difficulty levels, a referee mode, leaderboards and match replays. The game rules live in a pure, server-authoritative engine running on Cloudflare Workers and Durable Objects with D1, while the React + Vite PWA only sends intents and renders server snapshots. The player-to-team dataset is built by a custom data pipeline, and the app ships to Android (TWA) and iOS (Capacitor shell) with native push notifications."
+     data-tech="TypeScript, React, Vite, PWA, Cloudflare Workers, Durable Objects, D1, WebSockets, Capacitor, Vitest"
+     data-link="https://ucikibirfutbol.com"
+     data-link-label="Play">
+
+  <div class="card-content">
+    <div class="icon-box"><i class="fa-solid fa-futbol"></i></div>
+    <h3>3·2·1 Futbol</h3>
+    <p>Real-time multiplayer football trivia game. Development &amp; launch contributor.</p>
+
+    <div class="tech-stack">
+        <span>React</span>
+        <span>Cloudflare Workers</span>
+        <span>PWA</span>
+    </div>
+
+    <span class="click-hint">Click for details <i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+</div>
+
+  <div class="card project-card"
+     data-title="Formula 1 Stats App"
+     data-status="Completed"
+     data-desc="Database Systems (COM2058) course project. I designed a relational schema for Formula 1 data covering the 2020–2026 seasons on MySQL 8, and built a FastAPI backend that uses raw SQL only (no ORM) together with a single-page vanilla JavaScript frontend. The whole stack runs with a single Docker Compose command."
+     data-tech="MySQL 8, Raw SQL, FastAPI, Python, Vanilla JavaScript, Docker Compose"
+     data-link="https://github.com/Dionysos22/com2058-formula1">
+
+  <div class="card-content">
+    <div class="icon-box"><i class="fa-solid fa-flag-checkered"></i></div>
+    <h3>Formula 1 Stats App</h3>
+    <p>F1 database with a raw-SQL FastAPI backend.</p>
+
+    <div class="tech-stack">
+        <span>MySQL</span>
+        <span>FastAPI</span>
+        <span>Docker</span>
+    </div>
+
+    <span class="click-hint">Click for details <i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+</div>
   
   <div class="card project-card" 
      data-title="MPL Language Compiler" 
@@ -100,7 +170,8 @@
   </div>
 </div>
 
-
+        </div>
+      </section>
     </main>
 
     <footer>
