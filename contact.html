@@ -57,54 +57,94 @@
     <main>
       <section class="page-section">
         <h2 class="section-title">Get In Touch</h2>
+        <p class="section-lead">
+          Have an internship opportunity, a project idea or just want to say
+          hi? Send a message and I'll get back to you.
+        </p>
         <div class="contact-container">
           <form id="contactForm">
             <div class="form-group">
+              <label for="name">Name</label>
               <input type="text" id="name" placeholder="Your Name" required />
             </div>
             <div class="form-group">
+              <label for="email">Email</label>
               <input
                 type="email"
                 id="email"
-                placeholder="Your Email"
+                placeholder="you@example.com"
                 required
               />
             </div>
             <div class="form-group">
+              <label for="message">Message</label>
               <textarea
                 id="message"
-                rows="5"
+                rows="6"
                 placeholder="Your Message..."
                 required
               ></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
           </form>
-          <div class="social-connect">
-            <h3>Or Connect Via</h3>
-            <div class="social-links-row">
-              <a
-                href="https://linkedin.com/in/sarpmatas"
-                target="_blank" rel="noopener noreferrer"
-                class="social-icon"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com/Dionysos22"
-                target="_blank" rel="noopener noreferrer"
-                class="social-icon"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="mailto:sarpmatas0@gmail.com" class="social-icon"
-                ><i class="fa-solid fa-envelope"></i
-              ></a>
+
+          <aside class="contact-info">
+            <div class="info-row">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <a href="mailto:sarpmatas0@gmail.com">sarpmatas0@gmail.com</a>
+              </div>
             </div>
-          </div>
+            <div class="info-row">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span>Ankara, Türkiye</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <i class="fa-solid fa-briefcase"></i>
+              <div>
+                <span class="info-label">Status</span>
+                <span>Open to internships</span>
+              </div>
+            </div>
+            <div class="social-connect">
+              <h3>Or Connect Via</h3>
+              <div class="social-links-row">
+                <a
+                  href="https://linkedin.com/in/sarpmatas"
+                  target="_blank" rel="noopener noreferrer"
+                  class="social-icon"
+                  title="LinkedIn"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a
+                  href="https://github.com/Dionysos22"
+                  target="_blank" rel="noopener noreferrer"
+                  class="social-icon"
+                  title="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="mailto:sarpmatas0@gmail.com" class="social-icon" title="Email"
+                  ><i class="fa-solid fa-envelope"></i
+                ></a>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
     </main>
 
     <footer>
+      <div class="footer-socials">
+        <a href="https://github.com/Dionysos22" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/sarpmatas" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:sarpmatas0@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
       <p>© 2026 Sarp Mataş | Designed by <strong>Dionysos</strong></p>
     </footer>
     <script src="js/script.js"></script>
